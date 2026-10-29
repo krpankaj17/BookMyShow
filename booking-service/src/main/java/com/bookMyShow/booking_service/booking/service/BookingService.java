@@ -29,7 +29,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service
-public class BookingService {
+public class    BookingService {
 
     private final BookingRepository bookingRepository;
     private final SeatHoldService seatHoldService;

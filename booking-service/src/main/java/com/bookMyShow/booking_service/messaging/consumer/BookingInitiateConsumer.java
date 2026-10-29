@@ -22,7 +22,8 @@ public class BookingInitiateConsumer {
         try {
             HoldQueueMessage queueMessage = objectMapper.readValue(message, HoldQueueMessage.class);
             bookingService.processHoldQueueMessage(queueMessage);
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            throw new RuntimeException("Booking initiation message processing failed", e);
         }
     }
 }
